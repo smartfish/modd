@@ -72,6 +72,8 @@ func _testWatch(t *testing.T, modfunc func(), trigger string, expected []string)
 	time.Sleep(200 * time.Millisecond)
 
 	confTxt := `
+		@shell = builtin
+
         ** {
             prep +onchange: echo ":skipit:" @mods
             prep: echo ":all:" @mods
